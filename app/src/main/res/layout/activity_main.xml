@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22343C "
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AllBtn"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/grebtst"
+        android:text="All"
+        android:textColor="#0D47A1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/partyBtn"
+        android:layout_width="116dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:text="Party"
+        android:textColor="#96A7AF"
+        android:paddingStart="30dp"
+        android:drawableStart="@drawable/gift"
+        android:background="@drawable/mainbtn"
+        app:layout_constraintStart_toEndOf="@id/AllBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/campBtn"
+        android:layout_width="116dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:text="Camping"
+        android:textColor="#96A7AF"
+        android:background="@drawable/mainbtn"
+        app:layout_constraintStart_toEndOf="@id/partyBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="401dp"
+        android:layout_height="437dp"
+        app:layout_constraintTop_toBottomOf="@id/AllBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#30444E"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
